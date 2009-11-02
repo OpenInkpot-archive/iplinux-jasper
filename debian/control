@@ -1,0 +1,45 @@
+Source: jasper
+Section: core
+Priority: optional
+Maintainer: Mikhail Gusarov <dottedmag@dottedmag.net>
+Build-Depends: debhelper (>= 7), libjpeg62-dev
+XCS-Cross-Host-Build-Depends: debhelper (>= 7)
+XCS-Cross-Build-Depends: libjpeg62-dev
+Standards-Version: 3.8.3
+Homepage: http://www.ece.uvic.ca/~mdadams/jasper
+
+Package: libjasper0
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: JPEG2000 codec implementation
+ JasPer includes a software-based implementation of the codec specified in the
+ JPEG-2000 Part-1 standard (i.e., ISO/IEC 15444-1).
+
+Package: libjasper-dev
+Section: libdevel
+Architecture: any
+Depends: libjasper0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Description: JPEG2000 codec implementation -- development files
+ JasPer includes a software-based implementation of the codec specified in the
+ JPEG-2000 Part-1 standard (i.e., ISO/IEC 15444-1).
+ .
+ This package contains headers and files necessary to link with library.
+
+Package: jasper-utils
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: JPEG2000 codec implementation -- utilities
+ JasPer includes a software-based implementation of the codec specified in the
+ JPEG-2000 Part-1 standard (i.e., ISO/IEC 15444-1).
+ .
+ This package contains command-line utilities.
+
+Package: libjasper0-dbg
+Section: debug
+Architecture: any
+Depends: ${misc:Depends}, libjasper0 (= ${binary:Version})
+Description: JPEG2000 codec implementation -- debugging information
+ JasPer includes a software-based implementation of the codec specified in the
+ JPEG-2000 Part-1 standard (i.e., ISO/IEC 15444-1).
+ .
+ This package contains debugging information for binaries.
